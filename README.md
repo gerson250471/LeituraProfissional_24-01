@@ -7,8 +7,8 @@
 
 |Nº|CAPÍTULO|INÍCIO|TERMINO|
 |---|---|---|---|
-|01|Introdução a Programação Web|11:32 01/05/2024|Aguardando|
-|02|Configurando o Ambiente| Aguardando|Aguardando|
+|01|Introdução a Programação Web|11:32 01/05/2024|10:09 02/05/2024|
+|02|Configurando o Ambiente|10:09 02/05/2024|10:26 02/05/2024|
 |03|A linguagem JavaScript|Aguardando|Aguardando|
 |04|A plataforma Node.js|Aguardando|Aguardando|
 |05|Front-end|Aguardando|Aguardando|
