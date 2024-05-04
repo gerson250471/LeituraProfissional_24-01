@@ -9,8 +9,8 @@
 |---|---|---|---|
 |01|Introdução a Programação Web|11:32 01/05/2024|10:09 02/05/2024|
 |02|Configurando o Ambiente|10:09 02/05/2024|10:26 02/05/2024|
-|03|A linguagem JavaScript|09:18 03/05/2024|Aguardando|
-|04|A plataforma Node.js|Aguardando|Aguardando|
+|03|A linguagem JavaScript|09:18 03/05/2024|09:33 04/05/2024|
+|04|A plataforma Node.js|09:33 04/05/2024|10:33 04/05/2024|
 |05|Front-end|Aguardando|Aguardando|
 |06|Back - End : MySQL|Aguardando|Aguardando|
 |07|Back - end : Web APIs|Aguardando|Aguardando|
