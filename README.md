@@ -11,7 +11,7 @@
 |02|Configurando o Ambiente|10:09 02/05/2024|10:26 02/05/2024|
 |03|A linguagem JavaScript|09:18 03/05/2024|09:33 04/05/2024|
 |04|A plataforma Node.js|09:33 04/05/2024|10:33 04/05/2024|
-|05|Front-end|Aguardando|Aguardando|
+|05|Front-end|10:49 06/05/2024|Aguardando|
 |06|Back - End : MySQL|Aguardando|Aguardando|
 |07|Back - end : Web APIs|Aguardando|Aguardando|
 |08|Front - end : JavaScript Client - Side|Aguardando|Aguardando|
