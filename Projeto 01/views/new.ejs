@@ -3,32 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <title>Cadastro Cliente</title>
   </head>
   <body>
-    <section class="cadastro-cliente">
-      <h1>Cadastro de Cliente</h1>
-      <p>Preencha os dados abaixo para salvar o cliente.</p>
-      <form action="">
-        <div class="cadastro">
-          <label for="name">Nome</label>
-          <input type="text" name />
-        </div>
-        <div class="cadastro">
-          <label for="age">Idade</label>
-          <input type="number" />
-        </div>
-        <div class="cadastro">
-          <label for="estado">Selecione o Estado</label>
-          <select name="estado">
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="MG">Minas Gerais</option>
-          </select>
-        </div>
-      </form>
-      <a href="">Cancelar</a>
-      <button>Salvar</button>
-    </section>
+    <h1>Cadastro de Cliente</h1>
+    <p>Preencha os dados abaixo para salvar o cliente</p>
+    <form action="">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" />
+      <label for="idade">Idade</label>
+      <input type="number" name="idade" />
+      <label for="uf">UF</label>
+      <select name="uf" id="uf">
+        <option value="sp">São Paulo</option>
+        <option value="rj">Rio de Janeiro</option>
+        <option value="mg">Minas Gerais</option>
+      </select>
+      <div>
+        <input type="submit" value="Cadastrar" />
+        <a href="/">Cancelar</a>
+      </div>
+    </form>
   </body>
 </html>

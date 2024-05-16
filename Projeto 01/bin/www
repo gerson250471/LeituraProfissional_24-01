@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+/* Acesso ao Banco de Dados*/
+global.db = require('../db');
 
 /**
  * Module dependencies.

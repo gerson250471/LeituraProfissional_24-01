@@ -59,6 +59,3 @@ typings/
 
 # next.js build output
 .next
-
-# Dados sensíveis do banco de dados
-db.js

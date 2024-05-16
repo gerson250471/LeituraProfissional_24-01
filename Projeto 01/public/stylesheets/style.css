@@ -11,16 +11,29 @@ table {
   width: 50%;
 }
 
+
 thead {
-  background-color: #ccc;
-  margin: 5px 2px;
+  background-color: blue;
+  color: aliceblue;
 }
 
-.name{
-  width: 50%;
+.nome {
+  width: 60%;
 }
 
-.cadastro{
-  padding: 10px 10px;
-  margin-top: 5px;
+.idade {
+  width: 20%;
+}
+
+.uf {
+  width: 10%;
+}
+
+label {
+  display: block;
+  padding: 5px;
+}
+
+div {
+  padding: 5px;
 }
