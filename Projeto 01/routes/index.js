@@ -18,10 +18,18 @@ router.get('/new',function(req,res,next) {
   res.render('new', { title:"Cadastro de Cliente", action:"/new"});
 });
 
-/* POST new page. */
-router.post('/new', function(req, res, next) {
-   //futuramente vamos salvar o cliente aqui
-   res.redirect('/?new=true');
-  });
+/* POST new page. */ 
+router.post('/new', async function (req, res) {
+  const nome = req.body.nome  
+  const idade = !req.body.idade ? null : parseInt(req.body.idade); 
+  const uf =  req.body.uf  
+  
+  try {  
+    await global.db.insertCliente({ nome, idade, uf }); res.redirect('/?new=true');
+  } 
+  catch (error) {
+    res.redirect('/?erro=' + error);
+  }
+});
 
 module.exports = router;
