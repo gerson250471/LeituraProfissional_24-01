@@ -8,19 +8,24 @@
     <title>Cadastro Cliente</title>
   </head>
   <body>
-    <h1>Cadastro de Cliente</h1>
+    <h1><%= title %></h1>
     <p>Preencha os dados abaixo para salvar o cliente</p>
     <form action="<%= action %>" method="post">
-      <label for="nome">Nome</label>
-      <input type="text" name="nome" />
-      <label for="idade">Idade</label>
-      <input type="number" name="idade" />
-      <label for="uf">UF</label>
-      <select name="uf" id="uf">
-        <option value="sp">São Paulo</option>
-        <option value="rj">Rio de Janeiro</option>
-        <option value="mg">Minas Gerais</option>
-      </select>
+      <label
+        >Nome: <input type="text" name="nome" value="<%= result.Nome %>"
+      /></label>
+      <label
+        >Idade: <input type="number" name="idade" value="<%= result.Idade %>"
+      /></label>
+
+      <label>UF: <select name="uf">
+        <% const s = "selected" %>
+        <option <% if(result.UF === "sp") { %><%= s %><% } %>>SP</option>
+        <option <% if(result.UF === "rj") { %><%= s %><% } %>>RJ</option>
+        <option <% if(result.UF === "mg") { %><%= s %><% } %>>MG</option>
+        <!-- coloque os estados que quiser -->
+      </select></label>
+
       <div>
         <input type="submit" value="Cadastrar" />
       </div>
