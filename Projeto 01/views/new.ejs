@@ -10,7 +10,7 @@
   <body>
     <h1>Cadastro de Cliente</h1>
     <p>Preencha os dados abaixo para salvar o cliente</p>
-    <form action="">
+    <form action="<%= action %>" method="post">
       <label for="nome">Nome</label>
       <input type="text" name="nome" />
       <label for="idade">Idade</label>
@@ -23,6 +23,8 @@
       </select>
       <div>
         <input type="submit" value="Cadastrar" />
+      </div>
+      <div>
         <a href="/">Cancelar</a>
       </div>
     </form>
