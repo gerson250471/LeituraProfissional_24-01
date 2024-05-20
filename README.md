@@ -12,7 +12,7 @@
 |03|A linguagem JavaScript|09:18 03/05/2024|09:33 04/05/2024|
 |04|A plataforma Node.js|09:33 04/05/2024|10:33 04/05/2024|
 |05|Front-end|10:49 06/05/2024|11:00 10/05/2024|
-|06|Back - End : MySQL|11:00 10/05/2024|Aguardando|
+|06|Back - End : MySQL|11:00 10/05/2024|21:19 19/05/2024|
 |07|Back - end : Web APIs|Aguardando|Aguardando|
 |08|Front - end : JavaScript Client - Side|Aguardando|Aguardando|
 |09|Front - end : CSS|Aguardando|Aguardando|

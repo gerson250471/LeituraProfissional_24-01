@@ -60,7 +60,7 @@ router.post('/edit/:id', async function (req, res) {
  })
 
 /* GET delete page. */ 
-router.get('/delete/:id', async function (req, res) { 
+router.get('/delete/:ID', async function (req, res) { 
   const id = parseInt(req.params.ID); 
   try {
     await global.db.deleteCliente(id); 
