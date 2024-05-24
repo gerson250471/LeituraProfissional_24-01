@@ -19,6 +19,13 @@ const app = express();
 
 app.use(express.json());
 
+// Apagar um cadastro
+app.delete("/clientes/:id",(requeste,response) => {
+    const id = parseInt(requeste.params.id);
+    db.deleteCliente(id);
+    response.sendStatus(204);
+})
+
 // Atualizar um cadastro
 app.patch("/clientes/:id",(request,response) => {
     const id = parseInt(request.params.id);
@@ -28,22 +35,24 @@ app.patch("/clientes/:id",(request,response) => {
 })
 
 // Enviando um nome para cadastrar
-app.post("/clientes",(request,response) => {
+app.post("/clientes",async (request,response) => {
     const clientes = request.body;
-    db.insertCliente(clientes);
+    await db.insertCliente(clientes);
     response.sendStatus(201);
 })
 
 // Obtendo um cliente específico
-app.get("/clientes/:id",(requeste,response) => {
+app.get("/clientes/:id",async (requeste,response) => {
     const id = parseInt(requeste.params.id);
-    response.json(db.selectCliente(id));
+    const clientes = await db.selectCliente(id);
+    response.json(clientes);
 })
 
 // Obtendo a lista de clientes
-app.get("/clientes",(requeste,response) => {
-    response.json(db.selectClientes());
-})
+app.get("/clientes",async (requeste,response) => {
+    const clientes = await db.selectClientes();
+    response.json(clientes);
+});
 
 // Rota padrão do cliente
 app.get("/",(request,response) => {
