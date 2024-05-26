@@ -1,0 +1,80 @@
+/* Reset inicial */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Cor de fundo do corpo */
+body {
+    background-color: #ccc;
+    width: 100%;
+}
+
+/* container estudos */
+.estudo-container {
+    width: 90%;
+    height: 500px;
+    background-color: #f1f1f5;
+    margin-left: 3%;
+    border-radius: 25px;
+}
+
+/* Configurando o Título Principal */
+h1{
+    display: flex;
+    margin: 12px 5px;
+    font-size: 3rem;
+    margin-left: 35px;
+    padding: 20px 25px;
+    align-items: center;
+}
+
+/* área de execução do exercício */
+div{
+    width: 200px;
+    height: 75px;
+    background-color: #c1c1c1;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+/* Configurando o Título do Exercício */
+h2 {
+    margin: 10px 25px;
+    font-size: 30px;
+    padding: 10px 10px;
+}
+
+/* Configurando os Títulos dos tópicos */
+h3 {
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Configurando o botão */
+input[type ="button"]{
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+
+input[type ="button"]:hover{
+    background-color: #909093;
+    cursor: pointer;
+}
+
+/* select */
+select{
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+
+select:hover {
+    background-color: #909093;
+    cursor: pointer;
+}

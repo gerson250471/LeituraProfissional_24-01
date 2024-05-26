@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/script.js"></script>
+    <title>Aprendizado DOM</title>
+  </head>
+  <body>
+    <h1>Aprendizado sobre a DOM</h1>
+    <div class="estudo-container">
+      <h2>Eventos Javascript</h2>
+      <div class="item">
+        <h3>onclick</h3>
+        <input type="button" value="Testando" onclick="exibirMensagem()" />
+      </div>
+      <div class="item">
+        <h3>onchange</h3>
+        <select onchange="exibirUF(this.value)">
+          <option value="PR'">Paraná</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>

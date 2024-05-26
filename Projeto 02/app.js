@@ -20,17 +20,17 @@ const app = express();
 app.use(express.json());
 
 // Apagar um cadastro
-app.delete("/clientes/:id",(requeste,response) => {
+app.delete("/clientes/:id",async (requeste,response) => {
     const id = parseInt(requeste.params.id);
-    db.deleteCliente(id);
+    await db.deleteCliente(id);
     response.sendStatus(204);
 })
 
 // Atualizar um cadastro
-app.patch("/clientes/:id",(request,response) => {
+app.patch("/clientes/:id",async (request,response) => {
     const id = parseInt(request.params.id);
     const clientes = request.body;
-    db.updateCliente(id,clientes);
+    await db.updateCliente(id,clientes);
     response.sendStatus(200);
 })
 
@@ -61,6 +61,7 @@ app.get("/",(request,response) => {
     })
 })
 
+// Retornando acesso a porta padrão
 app.listen(process.env.PORT,() =>{
     console.log("Está funcionando");
 });
