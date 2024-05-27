@@ -55,3 +55,12 @@ function exibirMensagem(){
 function exibirUF(uf){
     alert(uf);
 }
+
+function exibeMensagemMouse(msg){
+    alert(msg);
+}
+
+// onfocus
+function exibeMensagemO(msg){
+    alert(msg);
+}

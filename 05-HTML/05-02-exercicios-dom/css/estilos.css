@@ -13,7 +13,7 @@ body {
 /* container estudos */
 .estudo-container {
     width: 90%;
-    height: 500px;
+    height: 600px;
     background-color: #f1f1f5;
     margin-left: 3%;
     border-radius: 25px;
@@ -31,7 +31,7 @@ h1{
 
 /* área de execução do exercício */
 div{
-    width: 200px;
+    width: 300px;
     height: 75px;
     background-color: #c1c1c1;
     padding: 20px;
@@ -75,6 +75,11 @@ select{
 }
 
 select:hover {
+    background-color: #909093;
+    cursor: pointer;
+}
+
+.item-onmouse:hover{
     background-color: #909093;
     cursor: pointer;
 }

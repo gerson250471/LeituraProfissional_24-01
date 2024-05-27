@@ -23,6 +23,22 @@
           <option value="RJ">Rio de Janeiro</option>
         </select>
       </div>
+      <div
+        class="item-onmouse"
+        onmouseenter="exibeMensagemMouse('Entrou')"
+        onmouseleave="exibeMensagemMouse('Saiu')"
+      >
+        <h3>onmouseenter e onmouseleave</h3>
+      </div>
+      <div class="item-onfocus">
+        <h3>onfocus e onblur</h3>
+        <input
+          type="text"
+          value=""
+          onfocus="exibeMensagemO('Entrou')"
+          onblur="exibeMensagemO('Saiu')"
+        />
+      </div>
     </div>
   </body>
 </html>
