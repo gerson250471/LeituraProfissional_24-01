@@ -11,33 +11,39 @@
     <h1>Aprendizado sobre a DOM</h1>
     <div class="estudo-container">
       <h2>Eventos Javascript</h2>
-      <div class="item">
-        <h3>onclick</h3>
-        <input type="button" value="Testando" onclick="exibirMensagem()" />
-      </div>
-      <div class="item">
-        <h3>onchange</h3>
-        <select onchange="exibirUF(this.value)">
-          <option value="PR'">Paraná</option>
-          <option value="SP">São Paulo</option>
-          <option value="RJ">Rio de Janeiro</option>
-        </select>
-      </div>
-      <div
-        class="item-onmouse"
-        onmouseenter="exibeMensagemMouse('Entrou')"
-        onmouseleave="exibeMensagemMouse('Saiu')"
-      >
-        <h3>onmouseenter e onmouseleave</h3>
-      </div>
-      <div class="item-onfocus">
-        <h3>onfocus e onblur</h3>
-        <input
-          type="text"
-          value=""
-          onfocus="exibeMensagemO('Entrou')"
-          onblur="exibeMensagemO('Saiu')"
-        />
+      <div class="estudos">
+        <div class="estudo-container-item">
+          <h3>onclick</h3>
+          <input type="button" value="Testando" onclick="exibirMensagem()" />
+        </div>
+        <div class="estudo-container-item">
+          <h3>onchange</h3>
+          <select onchange="exibirUF(this.value)">
+            <option value="PR'">Paraná</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+          </select>
+        </div>
+        <div
+          class="estudo-container-item-onmouse"
+          onmouseenter="exibeMensagemMouse('Entrou')"
+          onmouseleave="exibeMensagemMouse('Saiu')"
+        >
+          <h3>onmouseenter e onmouseleave</h3>
+        </div>
+        <div class="estudo-container-item-onfocus">
+          <h3>onfocus e onblur</h3>
+          <input
+            type="text"
+            value=""
+            onfocus="exibeMensagemO('Entrou')"
+            onblur="exibeMensagemO('Saiu')"
+          />
+        </div>
+        <div class="estudo-container-item">
+          <h3>Verificar digitação</h3>
+          <input type="text" onkeypress="return validarNumeros(event)" />
+        </div>
       </div>
     </div>
   </body>

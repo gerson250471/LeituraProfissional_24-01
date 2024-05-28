@@ -10,6 +10,23 @@ body {
     width: 100%;
 }
 
+/* Título principal */
+h1 {
+    padding: 10px 20px;
+    font-size: 4rem;
+}
+
+/* Título secundário */
+h2{
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+h3{
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
 /* container estudos */
 .estudo-container {
     width: 90%;
@@ -19,67 +36,19 @@ body {
     border-radius: 25px;
 }
 
-/* Configurando o Título Principal */
-h1{
+.estudos {
     display: flex;
-    margin: 12px 5px;
-    font-size: 3rem;
-    margin-left: 35px;
-    padding: 20px 25px;
-    align-items: center;
 }
 
-/* área de execução do exercício */
-div{
-    width: 300px;
-    height: 75px;
-    background-color: #c1c1c1;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-/* Configurando o Título do Exercício */
-h2 {
-    margin: 10px 25px;
-    font-size: 30px;
-    padding: 10px 10px;
-}
-
-/* Configurando os Títulos dos tópicos */
-h3 {
-    padding: 5px 15px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Configurando o botão */
-input[type ="button"]{
+.estudo-container-item,
+.estudo-container-item-onmouse,
+.estudo-container-item-onfocus {
+    width: 250px;
+    height: 80px;
+    background-color: #c4c4c4;
+    margin: 10px 10px;
     padding: 5px 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: #f3f3f3;
+    font-size: 15px;
+    border-radius: 10px;
 }
 
-input[type ="button"]:hover{
-    background-color: #909093;
-    cursor: pointer;
-}
-
-/* select */
-select{
-    padding: 5px 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: #f3f3f3;
-}
-
-select:hover {
-    background-color: #909093;
-    cursor: pointer;
-}
-
-.item-onmouse:hover{
-    background-color: #909093;
-    cursor: pointer;
-}

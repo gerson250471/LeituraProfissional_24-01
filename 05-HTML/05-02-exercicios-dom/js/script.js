@@ -64,3 +64,13 @@ function exibeMensagemMouse(msg){
 function exibeMensagemO(msg){
     alert(msg);
 }
+
+// onkeypress, onkeydown e onkeyup
+function validarNumeros(e){
+    let letra = e.charCode ? e.charCode: e.keyCode;
+    if(letra!=8){
+        if(letra<48||letra>57){
+            return false;
+        }
+    }
+}
