@@ -12,22 +12,22 @@
     <div class="quadro-container">
       <input type="text" id="display" value="0" disabled />
       <div class="quadro-container-item">
-        <input type="button" value="7" />
-        <input type="button" value="8" />
-        <input type="button" value="9" />
-        <input type="button" value="*" />
-        <input type="button" value="4" />
-        <input type="button" value="5" />
-        <input type="button" value="6" />
-        <input type="button" value="-" />
-        <input type="button" value="1" />
-        <input type="button" value="2" />
-        <input type="button" value="3" />
-        <input type="button" value="+" />
-        <input type="button" value="C" />
-        <input type="button" value="0" />
-        <input type="button" value="=" />
-        <input type="button" value="/" />
+        <input type="button" value="7" onclick="atualizarDisplay(this)" />
+        <input type="button" value="8" onclick="atualizarDisplay(this)" />
+        <input type="button" value="9" onclick="atualizarDisplay(this)" />
+        <input type="button" value="*" onclick="atualizarOperacao(this)" />
+        <input type="button" value="4" onclick="atualizarDisplay(this)" />
+        <input type="button" value="5" onclick="atualizarDisplay(this)" />
+        <input type="button" value="6" onclick="atualizarDisplay(this)" />
+        <input type="button" value="-" onclick="atualizarOperacao(this)" />
+        <input type="button" value="1" onclick="atualizarDisplay(this)" />
+        <input type="button" value="2" onclick="atualizarDisplay(this)" />
+        <input type="button" value="3" onclick="atualizarDisplay(this)" />
+        <input type="button" value="+" onclick="atualizarOperacao(this)" />
+        <input type="button" value="C" onclick="limparDisplay(this)" />
+        <input type="button" value="0" onclick="atualizarDisplay(this)" />
+        <input type="button" value="=" onclick="calcularOperacao(this)" />
+        <input type="button" value="/" onclick="atualizarOperacao(this)" />
       </div>
     </div>
   </body>
