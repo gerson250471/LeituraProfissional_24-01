@@ -33,3 +33,10 @@ function calcularOperacao(){
     display.value=total;
     operador='';
 }
+
+// obter os números diretamente do teclado
+function manipularTeclado(){
+    if(/[0-9]/.test(event.key)){
+        atualizarDisplay({value:event.key});
+    }
+}
