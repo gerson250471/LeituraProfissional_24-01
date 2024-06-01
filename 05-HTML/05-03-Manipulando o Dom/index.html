@@ -9,6 +9,46 @@
   </head>
   <body>
     <h1>Manipulando o DOM</h1>
-    <input type="text" name="nome" id="txtNome" />
+    <p>Sistema para exemplificar a manipulação de DOM</p>
+    <div id="divCadastro">
+      <h2>Cadastro</h2>
+      <form action="" method="">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" />
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" />
+        <label for="uf">UF</label>
+        <select name="uf" id="">
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="MG">Minas Gerais</option>
+        </select>
+        <input type="button" id="btnListar" value="Listar" />
+      </form>
+    </div>
+    <div id="divListagem">
+      <h2>Lista dos usuários cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>UF</td>
+            <td>Ações</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4">Nenhum cliente Cadastrado</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td colspan="4">
+            <input type="button" id="btnCadastrar" value="Cadastrar" />
+          </td>
+        </tfoot>
+      </table>
+    </div>
   </body>
 </html>
