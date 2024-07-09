@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event){
     divListagem.style.display = "none";
     /* selecionar quadro de Cadastro */
     const divCadastro = document.getElementById("divCadastro");
+
+    alertListagem.style.display ="none";
     
     loadDatabase()
         .then(clientes => updateTable(clientes))
@@ -35,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function(event){
         var data = new FormData(frmCadastro);
         updateDatabase(data)
             //opção alternativa para conseguir ir em frente no estudo
-            alert("Cadastrado com Sucesso");
+            alertListagem.innerHTML = `<strong>Sucesso!</strong> Cliente ${cliente.nome} cadastrado com sucesso!`; 
+            alertListagem.style.display = "block";
+            setTimeout(() => { alertListagem.style.display = "none" }, 2000);
             updateTable(clientes); 
             /* Não está entrando nesta linha abaixo   
             .then(cliente => {
@@ -92,20 +96,20 @@ function updateTable(clientes){
     } 
 }
 
-const webApiDomain = 'http://localhost:3000' 
-async function updateDatabase(data){ 
-    const json = {}; 
-    for(let item of data) 
-        json[item[0]] = item[1]; 
-    
-    const headers = new Headers(); 
-    headers.append("Content-Type", "application/json"); 
-    const response = await fetch(`${webApiDomain}/clientes`, { 
-        headers, 
-        method: 'POST', 
-        body: JSON.stringify(json) 
-    }); 
-    return await response.json(); 
+const webApiDomain = 'http://localhost:3000'
+async function updateDatabase(data){
+    const json = {};
+    for(let item of data)
+        json[item[0]] = item[1];
+
+    const headers = new Headers();
+    headers.append("Content-Type", "application/json");
+    const response = await fetch(`${webApiDomain}/clientes`, {
+                            headers,
+                            method: 'POST',
+                            body: JSON.stringify(json)
+                        });
+    return await response.json();
 }
 
 async function loadDatabase(){
