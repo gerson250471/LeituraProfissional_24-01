@@ -19,51 +19,84 @@
     <title>DOM</title>
   </head>
   <body>
-    <h1>Manipulando o DOM</h1>
-    <p>Sistema para exemplificar a manipulação de DOM</p>
-    <div id="divCadastro">
-      <h2>Cadastro</h2>
-      <form id="frmCadastro" action="" method="">
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" />
-        <label for="idade">Idade</label>
-        <input type="number" name="idade" />
-        <label for="uf">UF</label>
-        <select name="uf" id="">
-          <option value="SP">São Paulo</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="ES">Espirito Santo</option>
-          <option value="MG">Minas Gerais</option>
-        </select>
-        <input type="button" id="btnListar" value="Listar" />
-        <input type="submit" value="Salvar" />
-      </form>
-    </div>
-    <div id="divListagem">
-      <h2>Lista dos usuários cadastrados</h2>
-      <div id="alertListagem" class="alert alert-success">
-        <strong>Successo!</strong> Blá blá blá!
+    <div class="container">
+      <h1>Manipulando o DOM</h1>
+      <p>Sistema para exemplificar a manipulação de DOM</p>
+      <div id="divCadastro">
+        <h2>Cadastro</h2>
+        <div id="alertCadastro" class="alert alert-danger">
+          <strong>Erro!</strong> Nome é Obrigatório
+        </div>
+        <form
+          id="frmCadastro"
+          action=""
+          method=""
+          role="form"
+          class="form-horizontal"
+        >
+          <div class="form-group">
+            <label for="nome">Nome</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="nome" />
+          </div>
+
+          <div class="form-group">
+            <label for="idade">Idade</label>
+          </div>
+
+          <div class="form-group">
+            <input type="number" name="idade" />
+          </div>
+          <div class="form-group">
+            <label for="uf">UF</label>
+            <select name="uf" id="" class="form-control">
+              <option value="SP">São Paulo</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="ES">Espirito Santo</option>
+              <option value="MG">Minas Gerais</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input
+              type="button"
+              id="btnListar"
+              value="Listar"
+              class="btn btn-info"
+            />
+            <input type="submit" value="Salvar" class="btn btn-info" />
+          </div>
+        </form>
       </div>
-      <table cellspacing="0" class="table table-striped">
-        <thead>
-          <tr>
-            <td id="name">Nome</td>
-            <td id="idade">Idade</td>
-            <td id="uf">UF</td>
-            <td id="submit">Ações</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="4">Nenhum cliente Cadastrado</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <td colspan="4">
-            <input type="button" id="btnCadastrar" value="Cadastrar" />
-          </td>
-        </tfoot>
-      </table>
+      <div id="divListagem">
+        <h2>Lista dos usuários cadastrados</h2>
+        <div id="alertListagem" class="alert alert-success">
+          <strong>Successo!</strong> Blá blá blá!
+        </div>
+        <table
+          cellspacing="0"
+          class="table table-striped table-bordered table-hover"
+        >
+          <thead>
+            <tr>
+              <td id="name">Nome</td>
+              <td id="idade">Idade</td>
+              <td id="uf">UF</td>
+              <td id="submit">Ações</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4">Nenhum cliente Cadastrado</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="4">
+              <input type="button" id="btnCadastrar" value="Cadastrar" />
+            </td>
+          </tfoot>
+        </table>
+      </div>
     </div>
   </body>
 </html>

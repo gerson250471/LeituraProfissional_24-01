@@ -1,14 +1,18 @@
 /* Selecionando DOM para manipular */
-document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function(event) {
     /* selecionar quadro de listagem */
     const divListagem = document.getElementById("divListagem");
     /* Ocultar listagem */
     divListagem.style.display = "none";
     /* selecionar quadro de Cadastro */
     const divCadastro = document.getElementById("divCadastro");
-
+    /* Selecionar alertas */
+    const alertListagem = document.querySelector("#alertListagem")
     alertListagem.style.display ="none";
     
+    const alertCadastro = document.querySelector("#alertCadastro")
+    alertCadastro.style.display="none"
+
     loadDatabase()
         .then(clientes => updateTable(clientes))
         .catch(error => alert(`Ocorreu um erro ao carregar os clientes: ${error}`));
@@ -33,67 +37,68 @@ document.addEventListener("DOMContentLoaded", function(event){
     const frmCadastro = document.getElementById("frmCadastro");
 
     frmCadastro.onsubmit = (evt) => {
+        if(!document.querySelector('input[name=nome]').value){
+            alertCadastro.innerHTML='<strong>Erro!</strong> O campo nome é obrigatório';
+            alertCadastro.style.display="block";
+            setTimeout(() =>{
+                alertCadastro.style.display="none"
+            },3000);
+            return false;
+        }
         
         var data = new FormData(frmCadastro);
-        updateDatabase(data)
-            //opção alternativa para conseguir ir em frente no estudo
-            alertListagem.innerHTML = `<strong>Sucesso!</strong> Cliente ${cliente.nome} cadastrado com sucesso!`; 
-            alertListagem.style.display = "block";
-            setTimeout(() => { alertListagem.style.display = "none" }, 2000);
-            updateTable(clientes); 
-            /* Não está entrando nesta linha abaixo   
-            .then(cliente => {
-                alert(`Cliente ${cliente.Nome} cadastrado com sucesso!`);
-                updateTable(clientes);
-            })
-            .catch(error => alert(`Ocorreu um erro: ${error}`))
-            *** ainda não entendi o porque não entrou neste ponto ***
-            */
+        updateDatabase(data);
+        /* ocultar Quadro de Cadastro */
+        divCadastro.style.display = "none";
+
+        /* Mostrar Quadro de listagem */ 
+        divListagem.style.display="block";
+        
+        alertListagem.innerHTML = `<strong>Sucesso!</strong> Cliente cadastrado com sucesso!`; 
+        alertListagem.style.display="block";
+        
+        setTimeout(() => { 
+            alertListagem.style.display = "none" 
+            updateTable(clientes);
+        }, 2000);
+        
         evt.preventDefault();
     }
+
 });
 
 function updateTable(clientes){
     let linha =""; 
     if(!Array.isArray(clientes)) clientes = [clientes];
     for(let cliente of clientes)
-         linha += `<tr><td>${cliente.Nome}</td>
-                <td>${cliente.Idade}</td><td>${cliente.UF}</td>
-                <td><input type="button" id="retira" value="X" data-id= "${cliente.ID}" /></td></tr>`;
-     
-     //se tem apenas uma TD, é a default 
-     const tbody = document.querySelector('table > tbody'); 
-     if(tbody.querySelectorAll('tr > td').length === 1) 
+        linha += `<tr><td>${cliente.Nome}</td>
+    <td>${cliente.Idade}</td><td>${cliente.UF}</td>
+    <td><input type="button" class="btn btn-danger" id="retira" value="X" data-id= "${cliente.ID}" /></td></tr>`;
+    
+    //se tem apenas uma TD, é a default 
+    const tbody = document.querySelector('table > tbody'); 
+    if(tbody.querySelectorAll('tr > td').length === 1) 
         tbody.innerHTML = ""; 
     
-     tbody.innerHTML += linha; 
-     
-     divListagem.style.display = "block"; 
-     divCadastro.style.display = "none"; 
-     
-     frmCadastro.reset(); 
-     
-     const buttons = document.querySelectorAll("input[value='X']"); 
-     for(let btn of buttons){ 
-        if(btn.onclick !== null) continue; 
-        btn.onclick = (evt) => { 
-            if(confirm('Tem certeza que deseja excluir este cliente?')){ 
-                deleteDataBase(btn.getAttribute('data-id'))
-                //opção alternativa para conseguir ir em frente no estudo
-                alert('Cliente excluído com sucesso!');
-                btn.closest('tr').remove();
+    tbody.innerHTML += linha; 
+    
+    divListagem.style.display = "block"; 
+    divCadastro.style.display = "none"; 
+    
+    frmCadastro.reset();  
 
-                    /* não está entrando neste ponto
-                    .then(result => {
-                        alert('Cliente excluído com sucesso!');
-                        btn.closest('tr').remove(); 
-                    })
-                    .catch(error => alert(`Ocorreu um erro ao excluir o cliente: ${error}`))
-                    *** ainda não entendi o porque não entrou neste ponto ***
-                    */
-            } 
-        } 
-    } 
+    const buttons = document.querySelectorAll("input[value='X']"); 
+    for(let btn of buttons){ 
+       if(btn.onclick !== null) continue; 
+       btn.onclick = (evt) => { 
+           if(confirm('Tem certeza que deseja excluir este cliente?')){ 
+               deleteDataBase(btn.getAttribute('data-id'))
+               //opção alternativa para conseguir ir em frente no estudo
+               alert('Cliente excluído com sucesso!');
+               btn.closest('tr').remove();
+           } 
+       } 
+    }
 }
 
 const webApiDomain = 'http://localhost:3000'

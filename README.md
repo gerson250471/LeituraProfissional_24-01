@@ -15,5 +15,5 @@
 |06|Back - End : MySQL|11:00 10/05/2024|21:19 19/05/2024|
 |07|Back - end : Web APIs|21:19 19/05/2024|15:11 23/05/2024|
 |08|Front - end : JavaScript Client - Side|15:11 23/05/2024|14:59 30/06/2024|
-|09|Front - end : CSS|14:59 30/06/2024|Aguardando|
-|10|Boas práticas com Node.js|Aguardando|Aguardando|
+|09|Front - end : CSS|14:59 30/06/2024|13:42 11/07/2024|
+|10|Boas práticas com Node.js|13:42 11/07/2024|13:42 11/07/2024|
